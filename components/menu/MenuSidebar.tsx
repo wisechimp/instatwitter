@@ -57,11 +57,9 @@ const MenuSidebar = () => {
             items-center
             justify-between
             space-x-2
-            bg-primaryCentral
-            text-white
             p-4
             text-center
-            hover:bg-opacity-90
+            hover:bg-white/30
             transition
             duration-200
             m-4
