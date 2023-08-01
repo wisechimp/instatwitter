@@ -2,6 +2,8 @@ import Link from "next/link"
 import { BsThreeDots } from "react-icons/bs"
 
 import navigationMenuData from "@/data/navigation"
+import Avatar from "../common/avatar"
+import BeATwittButton from "../common/BeATwittButton"
 
 const MenuSidebar = () => {
   return (
@@ -31,22 +33,7 @@ const MenuSidebar = () => {
             {item.title !== "InstaTwit" && <div>{item.title}</div>}
           </Link>
         ))}
-        <button
-          className='
-            rounded-full
-            bg-primaryCentral
-            text-white
-            m-4
-            p-4
-            text-2xl
-            text-center
-            hover:bg-opacity-90
-            transition
-            duration-200
-          '
-        >
-          Be a Twitt!
-        </button>
+        <BeATwittButton />
       </div>
       <div>
         <button
@@ -66,7 +53,7 @@ const MenuSidebar = () => {
           '
         >
           <div className='flex items-center space-x-2'>
-            <div className='rounded-full bg-primaryDark w-10 h-10'></div>
+            <Avatar />
             <div className='text-start text-sm'>
               <div className='font-semibold'>Wise Chimp</div>
               <div>@wisechimp</div>
