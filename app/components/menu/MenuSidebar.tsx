@@ -1,15 +1,18 @@
 import Link from "next/link"
 import { BsThreeDots } from "react-icons/bs"
-
-import navigationMenuData from "@/data/navigation"
-import Avatar from "../common/avatar"
 import BeATwittButton from "../common/BeATwittButton"
+import Avatar from "../common/Avatar"
+import MenuData from "@/types/MenuData"
 
-const MenuSidebar = () => {
+interface MenuSidebarProps {
+  data: Array<MenuData>
+}
+
+const MenuSidebar = ({ data }: MenuSidebarProps) => {
   return (
     <section className='fixed w-72 flex flex-col h-screen space-y-4'>
       <div className='flex flex-col h-full space-y-4 mt-4'>
-        {navigationMenuData.map((item, i) => (
+        {data.map((item, i) => (
           <Link
             className='
                   hover:bg-white/30

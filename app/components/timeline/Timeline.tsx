@@ -1,5 +1,5 @@
 import BeATwittButton from "../common/BeATwittButton"
-import Avatar from "../common/avatar"
+import Avatar from "../common/Avatar"
 import TwittCard from "../twittcard/TwittCard"
 
 const Timeline = () => {
@@ -16,7 +16,7 @@ const Timeline = () => {
           <input
             type='text'
             placeholder='Whassup?'
-            className='w-full h-full p-4 bg-transparent outline-none border-none placeholder:text-2xl placeholder:text-primaryDark/50'
+            className='w-full h-full p-4 bg-transparent outline-none border-none placeholder:text-2xl placeholder:text-primaryDark/70'
           />
           <div className='w-full justify-between items-center flex'>
             <div>Icons</div>

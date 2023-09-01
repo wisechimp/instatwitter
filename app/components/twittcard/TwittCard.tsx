@@ -1,5 +1,5 @@
 import { BsDot, BsThreeDots } from "react-icons/bs"
-import Avatar from "../common/avatar"
+import Avatar from "../common/Avatar"
 import TwittCardIcon from "../twittcardicon/TwittCardIcon"
 import twittCardIcons from "@/data/twittcardicons"
 
