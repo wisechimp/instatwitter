@@ -1,7 +1,7 @@
 import navigationMenuData from "@/data/navigation"
 import MenuSidebar from "./components/menu/MenuSidebar"
 import Timeline from "./components/timeline/Timeline"
-import WhatsUpSidebar from "./components/explorationsidebar/ExplorationSidebar"
+import ExplorationSidebar from "./components/explorationsidebar/ExplorationSidebar"
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         {/* left sidebar for navigation */}
         <MenuSidebar data={navigationMenuData} />
         <Timeline />
-        <WhatsUpSidebar />
+        <ExplorationSidebar />
       </div>
     </div>
   )
