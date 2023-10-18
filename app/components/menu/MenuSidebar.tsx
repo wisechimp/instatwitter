@@ -36,7 +36,7 @@ const MenuSidebar = ({ data }: MenuSidebarProps) => {
             {item.title !== "InstaTwit" && <div>{item.title}</div>}
           </Link>
         ))}
-        <BeATwittButton />
+        <BeATwittButton buttText="Be A Twitt"/>
       </div>
       <div>
         <button

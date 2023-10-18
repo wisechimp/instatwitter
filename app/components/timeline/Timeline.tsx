@@ -23,7 +23,7 @@ const Timeline = () => {
             {/* Need to style the component, can follow a tutorial:
                   https://www.smashingmagazine.com/2020/05/reusable-react-components-tailwind/
                  */}
-            <BeATwittButton />
+            <BeATwittButton buttText="Be A Twitt"/>
           </div>
         </div>
       </div>

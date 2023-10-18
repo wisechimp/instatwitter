@@ -1,4 +1,8 @@
-const BeATwittButton = () => {
+interface BeATwittProps {
+  buttText: string
+}
+
+const BeATwittButton = ({buttText}: BeATwittProps) => {
   return (
     <button
       className='
@@ -15,7 +19,7 @@ const BeATwittButton = () => {
             duration-200
           '
     >
-      Be a Twitt!
+      {buttText}
     </button>
   )
 }
