@@ -8,7 +8,7 @@ interface TwittProfileLinkProps {
   data: TwittProfileType
 }
 
-const TwittProfileLink = ({ key, followButt, data}: TwittProfileLinkProps) => {
+const TwittProfileLink = ({ followButt, data }: TwittProfileLinkProps) => {
   const { name, handle } = data
   return (
     <div>

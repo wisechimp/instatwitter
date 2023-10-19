@@ -6,13 +6,13 @@ interface SearchInputProps {
 
 const SearchInput = ({ placeholderText }: SearchInputProps) => {
   return (
-    <div className='m-4 '>
+    <div className='p-4'>
       <div className='relative w-full h-full'>
         <input
           id='searchBox'
           type='text'
           placeholder={placeholderText}
-          className='rounded-3xl py-4 px-12 outline-none border-[1px] border-primaryDark focus:border focus:border-white bg-primaryDark/10 placeholder:text-primaryDark/70'
+          className='rounded-3xl py-4 ps-10 outline-none border-[1px] border-primaryDark focus:border focus:border-white bg-primaryDark/10 placeholder:text-primaryDark/70'
         />
         <label
           htmlFor='searchBox'
