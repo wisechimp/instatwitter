@@ -5,7 +5,7 @@ interface TrendingItemCardProps{
   key: number,
   data: TrendingType
 }
-const TrendingCardItem = ({key, data}: TrendingItemCardProps) => {
+const TrendingCardItem = ({data}: TrendingItemCardProps) => {
   const { hashtag, popularity } = data
   const formattedPopularity = formatnumbers(popularity)
   return (
