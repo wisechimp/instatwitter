@@ -103,12 +103,12 @@ export interface Database {
         Insert: {
           id: string
           updated_at?: string
-          username?: string | null
+          username: string
         }
         Update: {
           id?: string
           updated_at?: string
-          username?: string | null
+          username: string
         }
         Relationships: [
           {
