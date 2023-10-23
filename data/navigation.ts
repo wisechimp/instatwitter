@@ -4,12 +4,8 @@ import { HiOutlineHashtag } from 'react-icons/hi'
 
 const navigationMenuData = [
   {
-    title: "InstaTwit",
+    title: "",
     icon: BsTwitter
-  },
-  {
-    title: 'Home',
-    icon: BiHomeCircle
   },
   {
     title: 'Explore',
