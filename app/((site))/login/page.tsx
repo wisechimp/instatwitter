@@ -26,7 +26,7 @@ const Login = () => {
         <div className={`flex justify-between py-4 ${signupOption ? "" : "hidden" }`}>
           <label htmlFor='username'>Username:</label>
           <input 
-          className='border-2 border-primaryDark'
+            className='border-2 border-primaryDark'
             name='username'
             onChange={(e) => setUsername(e.target.value)}
             value={username}
@@ -35,7 +35,7 @@ const Login = () => {
             <div  className='flex justify-between py-4'>
           <label htmlFor='email'>Email:</label>
           <input
-          className='border-2 border-primaryDark'
+            className='border-2 border-primaryDark'
             name='email'
             type='email'
             onChange={(e) => setEmail(e.target.value)}
@@ -45,7 +45,7 @@ const Login = () => {
           <div className='flex justify-between py-4'>
           <label htmlFor='password'>Password:</label>
           <input
-          className='border-2 border-primaryDark'
+            className='border-2 border-primaryDark'
             type='password'
             name='password'
             onChange={(e) => setPassword(e.target.value)}

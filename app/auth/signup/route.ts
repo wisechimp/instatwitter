@@ -1,8 +1,6 @@
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs"
-import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 
-import type { Database } from "@/lib/database.types"
+import { supabaseRouteHandlerConfig } from "@/app/configs"
 
 export async function POST(request: Request) {
   const requestUrl = new URL(request.url)
@@ -10,20 +8,17 @@ export async function POST(request: Request) {
   const email = String(formData.get("email"))
   const password = String(formData.get("password"))
   const username = String(formData.get("username"))
-  const cookieStore = cookies()
-  const supabase = createRouteHandlerClient<Database>({
-    cookies: () => cookieStore,
-  })
+  const supabase = await supabaseRouteHandlerConfig()
 
   // Checking whether the username already exists
   const { data, error } = await supabase
     .from("profiles")
     .select()
     .eq("username", username)
-    
-    console.log(data)
-    console.log("The data length is: " + data?.length)
-  
+
+  console.log(data)
+  console.log("The data length is: " + data?.length)
+
   if (data && data.length > 0) {
     console.log("Here is some user data: " + data)
     const signupFailedUrl = new URL(`/login`, requestUrl)
