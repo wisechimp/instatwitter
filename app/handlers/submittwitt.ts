@@ -1,11 +1,12 @@
+"use server"
 import { randomUUID } from "crypto"
-import { supabaseServerComponentConfig } from "../configs"
+import supabaseServerComponentConfig from "../configs/supabaseservercomponentconfig"
+import { revalidatePath } from "next/cache"
+import TwittSubmitData from "@/types/TwittSubmitData"
 
-const handleSubmitTwitt = async (formData: FormData) => {
-  "use server"
+const handleSubmitTwitt = async (data: TwittSubmitData) => {
   const supabase = supabaseServerComponentConfig()
-  const twitt = formData.get("twitt")?.toString()
-  console.log("Form Data: " + twitt)
+  const twitt = data.twitt
   if (!twitt) return
 
   const { data: userData, error: userError } = await supabase.auth.getUser()
@@ -25,6 +26,7 @@ const handleSubmitTwitt = async (formData: FormData) => {
       " . The Error is " +
       JSON.stringify(twittError)
   )
+  revalidatePath("/")
 }
 
 export default handleSubmitTwitt
