@@ -1,10 +1,13 @@
 interface BeATwittProps {
   buttText: string
+  isSubmitting: boolean
+  submittingText: string
 }
 
-const BeATwittButton = ({buttText}: BeATwittProps) => {
+const BeATwittButton = ({buttText, isSubmitting, submittingText}: BeATwittProps) => {
   return (
     <button
+      disabled={isSubmitting}
       className='
             rounded-full
             bg-primaryCentral
@@ -19,7 +22,7 @@ const BeATwittButton = ({buttText}: BeATwittProps) => {
             duration-200
           '
     >
-      {buttText}
+      {isSubmitting ? submittingText : buttText}
     </button>
   )
 }
