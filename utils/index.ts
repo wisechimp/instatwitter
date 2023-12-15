@@ -1,3 +1,3 @@
-import formatnumbers from "./formatnumbers"
+import formatNumbers from "./formatnumbers"
 
-export { formatnumbers }
+export { formatNumbers }

@@ -12,7 +12,7 @@ const TwittProfileLink = ({ followButt, data }: TwittProfileLinkProps) => {
   const { name, handle } = data
   return (
     <div>
-      <button
+      <div
         className='
               rounded-full
               w-full
@@ -55,7 +55,7 @@ const TwittProfileLink = ({ followButt, data }: TwittProfileLinkProps) => {
             <BsThreeDots />
           </div>
         )}
-      </button>
+      </div>
     </div>
   )
 }
