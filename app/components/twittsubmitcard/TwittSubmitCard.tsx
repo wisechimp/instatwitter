@@ -6,6 +6,7 @@ import BeATwittButton from "../common/BeATwittButton"
 import handleSubmitTwitt from "@/app/handlers/submittwitt"
 import TwittSubmitData from "@/types/TwittSubmitData"
 
+// Followed this helpful article: https://scastiel.dev/server-components-actions-react-nextjs
 const TwittSubmitCard = () => {
   const { register, handleSubmit, reset, formState: {isSubmitting} } = useForm<TwittSubmitData>({
 

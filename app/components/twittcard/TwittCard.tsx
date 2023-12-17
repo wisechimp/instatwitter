@@ -11,6 +11,7 @@ dayjs.extend(relativeTime)
 
 const TwittCard = ({ data }: TwittData) => {
   const { text, created_at, profiles } = data
+  const { username } = profiles
   return (
     <div className='pt-4 pb-2 px-4 border-b-[0.5px] border-primaryDark flex space-x-4'>
       <div>
@@ -19,8 +20,8 @@ const TwittCard = ({ data }: TwittData) => {
       <div className='flex flex-col space-y-2'>
         <div className='flex items-center w-full justify-between'>
           <div className='flex items-center space-x-1'>
-            <div className='font-bold text-primaryCentral'>{profiles.username}</div>
-            <div>{`@${profiles.username.replace(/ /g, "").toLowerCase()}`}</div>
+            <div className='font-bold text-primaryCentral'>{username}</div>
+            <div>{`@${username?.replace(/ /g, "").toLowerCase()}`}</div>
             <div>
               <BsDot />
             </div>
